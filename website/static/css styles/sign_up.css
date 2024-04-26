@@ -1,0 +1,108 @@
+body {
+  background-color: #1f2123;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.signup_container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  
+}
+
+.img_container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.website_icon {
+  width: 100px;
+  height: auto;
+}
+
+h1 {
+  font-size: 24px;
+  color: white;
+  margin-top: 10px;
+}
+
+.signup_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #444444ce;
+  border-radius: 4px;
+  background-color: #1f2123;
+  color: #a7aaad;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #1774cacb;
+    outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#message {
+  text-align: center;
+  color: #a7aaad;
+  margin-top: 20px;
+}
+
+/*styles for creating an alert message*/
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}

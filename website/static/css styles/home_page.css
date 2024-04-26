@@ -5,19 +5,6 @@ body {
   padding-bottom: 30px;
 }
 
-/*.container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-h1 {
-  text-align: center;
-  color: #333;
-}
-*/
 .note-container {
   margin-bottom: 20px;
 }
@@ -203,3 +190,4 @@ span {
 .border_left {
   border-left: 3px solid #4e4e4ee1;
 }
+
