@@ -6,6 +6,7 @@
     <title>Create a NotSphere Account</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/website_icon.png') }}">
     <link rel="stylesheet" href="../static/css styles/sign_up.css">
+    <link rel="stylesheet" href="../static/css styles/home_page.css">
 </head>
 <body>
   <form method="POST">
@@ -30,9 +31,34 @@
       {% endfor %}
     {% endif %}
     {% endwith %}
+    <header class="site-header">
+      <div class="site-branding">
+        <img class="website_icon" src="../static/images/website_icon.png">
+        <p class="site-title">NoteSphere</p>
+          
+      </div><!-- .site-branding -->
+        <nav id="site-navigation" class="main-navigation">
+          <div class="menu-primary-container">
+            <ul class="main-menu">
+              <li class="contact_us">
+                <a href="#">Contact Us</a>
+              <li class="home">
+                <a href="/">Home</a>
+              </li>
+              <li class="login">
+                <a href="/login">Login</a>
+              </li>
+              <li class="signup">
+                <a href="/sign_up">Sign Up</a>
+              </li>
+              <li class="logout">
+                <a href="/logout">Logout</a>
+              </li>
+    </ul></div>	</nav><!-- #site-navigation -->
+      </header>
     <div class="signup_container">
         <div class="img_container">
-          <img class="website_icon" src="../static/images/website_icon.png">
+          <!--<img class="website_icon" src="../static/images/website_icon.png">-->
           <h1>Sign Up</h1>
         </div>
         <form id="signup-form" class="signup_form">
@@ -54,7 +80,17 @@
         </form>
     </div>
     
-    <script src="../static/index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </form>
 </body>
 </html>

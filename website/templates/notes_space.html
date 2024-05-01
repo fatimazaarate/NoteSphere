@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteSphere</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/website_icon.png') }}">
+
+    <link rel="stylesheet" href="../static/css styles/home_page.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-branding">
+      <img class="website_icon" src="../static/images/website_icon.png">
+      <p class="site-title">NoteSphere</p>
+        
+    </div><!-- .site-branding -->
+      <nav id="site-navigation" class="main-navigation">
+        <div class="menu-primary-container">
+          <ul class="main-menu">
+            <li class="contact_us">
+              <a href="#">Contact Us</a>
+            <li class="home">
+              <a href="/">Home</a>
+            </li>
+            <li class="login">
+              <a href="/login">Login</a>
+            </li>
+            <li class="signup">
+              <a href="/sign_up">Sign Up</a>
+            </li>
+            <li class="logout">
+              <a href="/logout">Logout</a>
+            </li>
+  </ul></div>	</nav><!-- #site-navigation -->
+    </header>
+
+
+</body>
+</html>

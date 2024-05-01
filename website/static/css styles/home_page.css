@@ -5,7 +5,7 @@ body {
   padding-bottom: 30px;
 }
 
-.note-container {
+/* .note-container {
   margin-bottom: 20px;
 }
 
@@ -146,7 +146,7 @@ h1 {
   font-size: 17px;
 }
 
-button:hover {
+.signup_now:hover {
   background-color: rgba(21, 70, 231, 0.904); 
 }
 
