@@ -18,6 +18,17 @@
       <nav id="site-navigation" class="main-navigation">
         <div class="menu-primary-container">
           <ul class="main-menu">
+            {% if user.is_authenticated %}
+            <li class="contact_us">
+              <a href="#">Contact Us</a>
+            <li class="home">
+              <a href="/">Home</a>
+            </li>
+            <li class="logout">
+              <a href="/logout">Logout</a>
+            </li>
+            
+            {% else %}
             <li class="contact_us">
               <a href="#">Contact Us</a>
             <li class="home">
@@ -29,9 +40,7 @@
             <li class="signup">
               <a href="/sign_up">Sign Up</a>
             </li>
-            <li class="logout">
-              <a href="/logout">Logout</a>
-            </li>
+            {% endif %}
   </ul></div>	</nav><!-- #site-navigation -->
     </header>
 
