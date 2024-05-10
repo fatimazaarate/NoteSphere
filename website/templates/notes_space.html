@@ -10,6 +10,28 @@
 
 </head>
 <body>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+      {% if category == 'error' %}
+        <div class="alert alert-danger" role="alert">
+          {{ message }}
+          <button type="button" class="close_btn" data-dismiss="alert">
+            x
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success" role="alert">
+          {{ message }}
+          <button type="button" class="close_btn" data-dismiss="alert">
+            x
+          </button>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+    
   <header class="site-header">
     <div class="site-branding">
       <img class="website_icon" src="../static/images/website_icon.png">
@@ -42,16 +64,37 @@
   <div class="notes-container">
     <ul class="list_notes">
       {% for note in user.notes %}
-      <li class="note_item">{{ note.data}}</li>
+      <li class="note_item">
+        <p class="note_text">{{ note.text }}</p>
+        <button class="close_btn" onclick="deleteNote({{ note.id }})">x</button>
+        </button>
+      </li>
       {% endfor %}
     </ul>
   
     <form method="POST">
       <textarea name="note" id="note"></textarea>
       <div>
-        <button type="submit">Add Note</button>
+        <button class="submit">Add Note</button>
       </div>
   </div>
+
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+  ></script>
+    
+  <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+  ></script>
+
+  <script 
+      type="text/javascript" 
+      src="{{ url_for('static', filename='index.js') }}"
+  ></script>
   </form>
 
 </body>

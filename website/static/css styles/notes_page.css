@@ -120,7 +120,7 @@ textarea:focus {
   border-color: #1774cacb;
 }
 
-button[type="submit"] {
+.submit {
   width: 100%;
   padding: 10px;
   border: none;
@@ -131,7 +131,7 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.submit:hover {
   background-color: #0056b3;
 }
 
@@ -152,4 +152,27 @@ button[type="submit"]:hover {
   color: #155724;
   background-color: #d4edda;
   border-color: #c3e6cb;
+}
+
+.note_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note_text {
+  text-align: left;
+  max-width: calc(100% - 30px);
+  margin: 0;
+}
+
+.close_btn {
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  opacity: .7;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
 }

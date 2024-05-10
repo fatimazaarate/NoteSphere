@@ -1,7 +1,8 @@
-// Function to dismiss alert messages
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('close')) {
-    var alertDiv = event.target.closest('.alert');
-    alertDiv.remove();
-  }
-});
+function deleteNote(noteId) {
+  fetch('/delete-note', {
+    method: "POST",
+    body: JSON.stringify({ noteId: noteId}),
+  }).then((_res) => {
+    window.location.href = "/notes_space";
+  });
+}

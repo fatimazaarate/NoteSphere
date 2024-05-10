@@ -97,12 +97,14 @@ button[type="submit"]:hover {
   background-color: #d4edda;
   border-color: #c3e6cb;
 }
-.close {
+.close_btn {
   float: right;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
-  line-height: 1;
   color: #000;
-  text-shadow: 0 1px 0 #fff;
-  opacity: .5;
+  opacity: .7;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
 }
