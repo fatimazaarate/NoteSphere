@@ -37,5 +37,6 @@ def delete_note():
     if note.user_id == current_user.id:
       db.session.delete(note)
       db.session.commit()
+      flash('Note deleted.', category='success')
       
-  return Jsonify({})
+  return jsonify({'message': 'Note deleted.', 'category': 'success'})
