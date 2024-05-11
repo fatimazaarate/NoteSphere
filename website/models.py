@@ -2,6 +2,7 @@ from website import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
 
+
 class Note(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   text = db.Column(db.String(10000))

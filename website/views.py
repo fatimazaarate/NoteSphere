@@ -3,6 +3,7 @@ from flask_login import login_required, current_user
 from .models import Note
 from . import db
 import json
+from datetime import datetime
 
 
 views = Blueprint('views', __name__)
@@ -21,7 +22,10 @@ def notes():
     if len(note) < 1:
       flash('Note is too short!', category='error')
     else:
-      new_note = Note(text=note, user_id=current_user.id)
+      # Add current date and time to the note text
+      note_text_with_datetime = f"{note}\n{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+
+      new_note = Note(text=note_text_with_datetime, user_id=current_user.id)
       db.session.add(new_note)
       db.session.commit()
       flash('Note added!', category='success')

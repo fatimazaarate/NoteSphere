@@ -65,9 +65,11 @@
     <ul class="list_notes">
       {% for note in user.notes %}
       <li class="note_item">
-        <p class="note_text">{{ note.text }}</p>
+        <div class="note-content">
+          <p class="note_text">{{ note.text }}</p>
+      </div>
         <button class="close_btn" onclick="deleteNote({{ note.id }})">x</button>
-        </button>
+        
       </li>
       {% endfor %}
     </ul>
@@ -95,6 +97,7 @@
       type="text/javascript" 
       src="{{ url_for('static', filename='index.js') }}"
   ></script>
+  
   </form>
 
 </body>

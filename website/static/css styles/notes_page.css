@@ -1,11 +1,12 @@
 body {
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background-color: #1f2123;
   color: #fff;
   padding-bottom: 30px;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .site-header {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +31,6 @@ body {
 
 .site-title {
   font-size: 20px;
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight:500;
   line-height: 72px;
   letter-spacing: -1px;
@@ -161,9 +161,18 @@ textarea:focus {
 
 .note_text {
   text-align: left;
-  max-width: calc(100% - 30px);
   margin: 0;
+  white-space: pre-line;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.3;
 }
+
+.note-content {
+  max-width: calc(100% - 30px);
+}
+
+
 
 .close_btn {
   float: right;
