@@ -13,10 +13,12 @@ To run NoteSphere locally on your machine, follow these steps:
    git clone https://github.com/fatimazaarate/notesphere.git
 
 2. Navigate to the project directory:
-  ```cd NoteSphere``` 
+  ```bash
+  cd NoteSphere
 
 3. Run the application:
-  ```python3 main.py```
+  ```bash
+  python3 main.py
 
 4. Open NoteSphere in your web browser:
 http://localhost:5000
