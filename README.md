@@ -14,7 +14,7 @@ To run NoteSphere locally on your machine, follow these steps:
 
 2. Navigate to the project directory:
   ```bash
-  cd NoteSphere
+  cd NoteSphere``` 
 
 3. Run the application:
   ```bash
