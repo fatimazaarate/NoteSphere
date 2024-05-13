@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
     <title>Login</title>
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/website_icon.png') }}">
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="../static/css styles/sign_up.css">
     <link rel="stylesheet" href="../static/css styles/home_page.css">
 </head>
 <body>
+  <!-- Form for login -->
   <form method="POST">
+    <!-- Flash messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
       {% for category, message in messages %}
       {% if category == 'error' %}
+        <!-- Error message -->
         <div class="alert alert-danger" role="alert">
           {{ message }}
           <button type="button" class="close_btn" data-dismiss="alert">
@@ -21,6 +28,7 @@
           </button>
         </div>
         {% else %}
+        <!-- Success message -->
         <div class="alert alert-success" role="alert">
           {{ message }}
           <button type="button" class="close_btn" data-dismiss="alert">
@@ -32,16 +40,21 @@
     {% endif %}
     {% endwith %}
 
+    <!-- Header section -->
     <header class="site-header">
       <div class="site-branding">
+        <!-- Website icon -->
         <img class="website_icon" src="../static/images/website_icon.png">
+        <!-- Site title -->
         <p class="site-title">NoteSphere</p>
-          
-      </div><!-- .site-branding -->
+      </div>
+      <!-- Navigation menu -->
         <nav id="site-navigation" class="main-navigation">
           <div class="menu-primary-container">
             <ul class="main-menu">
+              <!-- Authentication check -->
               {% if user.is_authenticated %}
+              <!-- If user is authenticated, show login and signup links -->
               <li class="login">
                 <a href="/login">Login</a>
               </li>
@@ -49,26 +62,22 @@
                 <a href="/sign_up">Sign Up</a>
               </li>
               {% else %}
+              <!-- If user is not authenticated, show contact us and home links -->
               <li class="contact_us">
                 <a href="#">Contact Us</a>
               <li class="home">
                 <a href="/">Home</a>
               </li>
-              <!--<li class="logout">
-                <a href="/logout">Logout</a>
-              </li>-->
-              
               {% endif %}
-              
-    </ul></div>	</nav><!-- #site-navigation -->
+    </ul></div>	</nav>
       </header>
 
-      
+    <!-- login container -->  
     <div class="signup_container">
         <div class="img_container">
-          <!--<img class="website_icon" src="../static/images/website_icon.png">-->
           <h1>Login</h1>
         </div>
+        <!-- login form -->
         <form id="signup-form" class="signup_form">
             <div class="form-group">
               <input type="email" id="email" name="email" placeholder="Email Address">
@@ -82,6 +91,7 @@
         </form>
         <p id="message"></p>
     </div>
+    <!-- External JavaScript libraries -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
     <title>NoteSphere</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/website_icon.png') }}">
-
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="../static/css styles/home_page.css">
 </head>
 <body>
+  <!-- Header section -->
   <header class="site-header">
     <div class="site-branding">
       <img class="website_icon" src="../static/images/website_icon.png">
       <p class="site-title">NoteSphere</p>
         
-    </div><!-- .site-branding -->
+    </div>
+      <!-- Navigation menu -->
       <nav id="site-navigation" class="main-navigation">
         <div class="menu-primary-container">
           <ul class="main-menu">
+            <!-- Authentication check -->
             {% if user.is_authenticated %}
             <li class="contact_us">
               <a href="#">Contact Us</a>
@@ -41,15 +46,15 @@
               <a href="/sign_up">Sign Up</a>
             </li>
             {% endif %}
-  </ul></div>	</nav><!-- #site-navigation -->
+  </ul></div>	</nav>
     </header>
-
+    <!-- Main content container -->
     <div class="container">
         <h1 class="container_header">Jot your thoughts with ease</h1>
         <p class="container_description">With NoteSphere, ensure your ideas are always at your fingertips. Start organizing your thoughts effortlessly today.</p>
         <a class="signup_now" href="/sign_up">Sign up now</a>
     </div>
-
+     <!-- Reviews section -->
     <div class="reviews">
       <h2>What people are saying</h2>
     <div class="reviews-container">

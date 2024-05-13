@@ -10,6 +10,7 @@
 
 </head>
 <body>
+  <!-- Flash messages -->
   {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
       {% for category, message in messages %}
@@ -31,16 +32,18 @@
       {% endfor %}
     {% endif %}
     {% endwith %}
-    
+  <!-- Header section -->
   <header class="site-header">
     <div class="site-branding">
       <img class="website_icon" src="../static/images/website_icon.png">
       <p class="site-title">NoteSphere</p>
         
-    </div><!-- .site-branding -->
+    </div>
+    <!-- Navigation menu -->
       <nav id="site-navigation" class="main-navigation">
         <div class="menu-primary-container">
           <ul class="main-menu">
+            <!-- Authentication check -->
             {% if user.is_authenticated %}
             <li class="contact_us">
               <a href="#">Contact Us</a>
@@ -60,6 +63,7 @@
             {% endif %}
           </ul></div>	</nav>
   </header>
+  <!-- Notes container -->
   <h1>Notes</h1>
   <div class="notes-container">
     <ul class="list_notes">
@@ -73,7 +77,7 @@
       </li>
       {% endfor %}
     </ul>
-  
+    <!-- Note form -->
     <form method="POST">
       <textarea name="note" id="note"></textarea>
       <div>
@@ -81,6 +85,7 @@
       </div>
   </div>
 
+  <!-- External JavaScript libraries -->
   <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

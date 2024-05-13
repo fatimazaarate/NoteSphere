@@ -172,8 +172,6 @@ textarea:focus {
   max-width: calc(100% - 30px);
 }
 
-
-
 .close_btn {
   float: right;
   font-size: 15px;

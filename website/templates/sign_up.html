@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
     <title>Create a NotSphere Account</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/website_icon.png') }}">
+     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="../static/css styles/sign_up.css">
     <link rel="stylesheet" href="../static/css styles/home_page.css">
 </head>
 <body>
+  <!-- Form for signup -->
   <form method="POST">
+    <!-- Flash messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
       {% for category, message in messages %}
@@ -31,12 +35,13 @@
       {% endfor %}
     {% endif %}
     {% endwith %}
+    <!-- Header section -->
     <header class="site-header">
       <div class="site-branding">
         <img class="website_icon" src="../static/images/website_icon.png">
         <p class="site-title">NoteSphere</p>
-          
-      </div><!-- .site-branding -->
+      </div>
+      <!-- Navigation menu -->
         <nav id="site-navigation" class="main-navigation">
           <div class="menu-primary-container">
             <ul class="main-menu">
@@ -46,14 +51,14 @@
               <li class="home">
                 <a href="/">Home</a>
               </li>        
-
-    </ul></div>	</nav><!-- #site-navigation -->
-      </header>
+    </ul></div>	</nav>
+    </header>
+    <!-- Signup container -->
     <div class="signup_container">
         <div class="img_container">
-          <!--<img class="website_icon" src="../static/images/website_icon.png">-->
           <h1>Sign Up</h1>
         </div>
+        <!-- Signup form -->
         <form id="signup-form" class="signup_form">
             <div class="form-group">
               <input type="email" id="email" name="email" placeholder="Enter email">
@@ -73,6 +78,7 @@
         </form>
     </div>
     
+    <!-- External JavaScript libraries -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
